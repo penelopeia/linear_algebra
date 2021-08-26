@@ -12,7 +12,10 @@ def multiplication(m1, m2):
 # dot product
 def inner_product(v1, v2):
     # given two vectors, v1(*transform)v2 = v2(*transform)v1
-    return False
+    result = 0
+    for i, o in enumerate(v1):
+        result += o*v2[i]
+    return result
 
 def outer_product(v1, v2):
     # v1v2(*transform), good for manipulating matrix representation
