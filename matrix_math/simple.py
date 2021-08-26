@@ -1,12 +1,19 @@
 def multiplication(m1, m2):
     # columns in A must equal rows in B
     result = []
-    for m in m1:
-        row_result = []
-        for n in m2:
-            product = m*n
-            row_result.append(product)
-        result.append(row_result)
+    result_row = []
+    for row in m1:
+        i = 0
+        result_row = []
+        for _ in m2[i]:
+            if len(result_row):
+                result.append(result_row)
+            col = []
+            for r in m2:
+                col.append(r[i])
+            d = inner_product(row, col)
+            result_row.append(d)
+            i += 1
     return result
 
 # dot product
