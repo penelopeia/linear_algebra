@@ -2,6 +2,7 @@ import unittest
 
 import matrix_math.simple as simp
 
+
 class TestSimple(unittest.TestCase):
 
     def test_inner_product(self):
@@ -16,3 +17,6 @@ class TestSimple(unittest.TestCase):
         answer = [[4,5,6],[8,10,12],[12,15,18]]
         result = simp.outer_product(v1, v2)
         self.assertEqual(result, answer)
+
+if __name__ == "__main__":
+    unittest.main()
