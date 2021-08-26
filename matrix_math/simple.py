@@ -19,7 +19,13 @@ def inner_product(v1, v2):
 
 def outer_product(v1, v2):
     # v1v2(*transform), good for manipulating matrix representation
-    return False
+    result = []
+    for o in v1:
+        row = []
+        for t in v2:
+            row.append(o*t)
+        result.append(row)
+    return result
 
 def vector_norm(v):
     return v
