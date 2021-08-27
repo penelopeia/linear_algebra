@@ -1,3 +1,6 @@
+from math import sqrt
+
+
 def multiplication(m1, m2):
     # columns in A must equal rows in B
     result = []
@@ -35,7 +38,10 @@ def outer_product(v1, v2):
     return result
 
 def vector_norm(v):
-    return v
+    result = 0
+    for e in v:
+        result += e*e
+    return sqrt(result)
 
 # matrix norm
 def frobenius_norm(m):

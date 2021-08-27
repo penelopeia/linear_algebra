@@ -1,4 +1,5 @@
 import unittest
+from math import sqrt
 
 import matrix_math.simple as simp
 
@@ -24,6 +25,10 @@ class TestSimple(unittest.TestCase):
         answer = [[58,64],[139,154]]
         result = simp.multiplication(m1, m2)
         self.assertEqual(result, answer)
+
+    def test_vector_norm(self):
+        result = simp.vector_norm([1,1,1])
+        self.assertEqual(result, sqrt(3))
 
 if __name__ == "__main__":
     unittest.main()
