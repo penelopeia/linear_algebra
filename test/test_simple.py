@@ -30,5 +30,11 @@ class TestSimple(unittest.TestCase):
         result = simp.vector_norm([1,1,1])
         self.assertEqual(result, sqrt(3))
 
+    def test_frobenius_norm(self):
+        m1 = [[1,2],[3,4]]
+        result = simp.frobenius_norm(m1)
+        self.assertEqual(round(result, 5), 5.47723)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -45,4 +45,8 @@ def vector_norm(v):
 
 # matrix norm
 def frobenius_norm(m):
-    return m
+    result = 0
+    for row in m:
+        for e in row:
+            result += e*e
+    return sqrt(result)
