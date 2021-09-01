@@ -1,5 +1,10 @@
 def transpose(m):
-    return m
+    # columns become rows and rows become columns
+    m_t = m[:]
+    for i, row in enumerate(m):
+        for n, e in enumerate(row):
+            m_t[n][i] = e
+    return m_t
 
 def identity(m):
     return m
