@@ -1,8 +1,11 @@
 from math import sqrt
 
-
+'''
+Multiply two vectors, matrices, or scalar to matrix
+using the inner product for dot product required.
+'''
 def multiplication(m1, m2):
-    # columns in A must equal rows in B
+    # columns in m1 must equal rows in m2
     result = []
     result_row = []
     for row in m1:
