@@ -19,6 +19,7 @@ class TestSimple(unittest.TestCase):
         result = simp.outer_product(v1, v2)
         self.assertEqual(result, answer)
 
+    '''should work for scalar mult, vector, or matrix'''
     def test_multiplication(self):
         m1 = [[1,2,3],[4,5,6]]
         m2 = [[7,8],[9,10],[11,12]]
@@ -34,6 +35,10 @@ class TestSimple(unittest.TestCase):
         m1 = [[1,2],[3,4]]
         result = simp.frobenius_norm(m1)
         self.assertEqual(round(result, 5), 5.47723)
+
+    def test_add(self):
+        '''input shape must be equal and output same size'''
+        self.assertEqual(True, True)
 
 
 if __name__ == "__main__":

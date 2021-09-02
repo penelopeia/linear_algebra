@@ -53,3 +53,6 @@ def frobenius_norm(m):
         for e in row:
             result += e*e
     return sqrt(result)
+
+def add(m1, m2):
+    return True

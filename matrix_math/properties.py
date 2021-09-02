@@ -28,10 +28,10 @@ def is_symmetric(m):
 def is_orthogonal(m1, m2):
     return True
 
+# this should take shape as input (or m?)
 def create_zeros(m):
-    # columns become rows and rows become columns
-    row_size = len(m[0])
-    column_size = len(m)
+    column_size = len(m[0])
+    row_size = len(m)
     m_z = []
     for r in range(row_size):
         temp = []
