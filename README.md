@@ -25,6 +25,13 @@ python calculator.py -h
 python calculator -multi1 [[1,2],[3,4]] -multi2 [[5,6],[7,8]]
 ```
 
+## Testing
+
+```
+# example test file to run
+python -m unittest test\test_properties.py
+```
+
 ## Authors
 
 [@Penelopeia](https://gist.github.com/penelopeia)
