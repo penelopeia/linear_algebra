@@ -55,4 +55,18 @@ def frobenius_norm(m):
     return sqrt(result)
 
 def add(m1, m2):
-    return True
+    result = m1[:]
+    if check_equal_size(m1, m2):
+        for i, row in enumerate(result):
+            for n, _ in enumerate(row):
+                result[i][n] = m1[i][n] + m2[i][n]
+        return result
+    else:
+        return False
+
+def check_equal_size(m1, m2):
+    if len(m1[0]) == len(m2[0]) and \
+        len(m1) == len(m2):
+        return True
+    else:
+        return False

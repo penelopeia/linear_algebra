@@ -36,9 +36,37 @@ class TestSimple(unittest.TestCase):
         result = simp.frobenius_norm(m1)
         self.assertEqual(round(result, 5), 5.47723)
 
-    def test_add(self):
+    def test_add_eq_size(self):
         '''input shape must be equal and output same size'''
-        self.assertEqual(True, True)
+        m1 = [[1,2,3],[4,5,6]]
+        m2 = [[1,2,3],[4,5,6]]
+        answer = [[2,4,6],[8,10,12]]
+        res = simp.add(m1, m2)
+        self.assertEqual(res, answer)
+    
+    def test_add_noteq_size(self):
+        '''input shape must be equal and output same size'''
+        m1 = [[1,2,3],[4,5,6]]
+        m2 = [[1,2,3,4],[5,6,7,8]]
+        answer = False
+        res = simp.add(m1, m2)
+        self.assertEqual(res, answer)
+
+    def test_equal_size(self):
+        '''input shape must be equal and output same size'''
+        m1 = [[1,2,3],[4,5,6]]
+        m2 = [[1,2,3],[4,5,6]]
+        answer = True
+        res = simp.check_equal_size(m1, m2)
+        self.assertEqual(res, answer)
+
+    def test_noteq_size(self):
+        '''input shape must be equal and output same size'''
+        m1 = [[1,2,3],[4,5,6]]
+        m2 = [[1,2,3,4],[5,6,7,8]]
+        answer = False
+        res = simp.check_equal_size(m1, m2)
+        self.assertEqual(res, answer)
 
 
 if __name__ == "__main__":
