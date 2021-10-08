@@ -56,7 +56,7 @@ class TestSimple(unittest.TestCase):
         '''input shape must be equal and output same size'''
         m1 = [[1,2,3],[4,5,6]]
         m2 = [[1,2,3],[4,5,6]]
-        answer = True
+        answer = 2
         res = simp.check_equal_size(m1, m2)
         self.assertEqual(res, answer)
 
@@ -66,6 +66,14 @@ class TestSimple(unittest.TestCase):
         m2 = [[1,2,3,4],[5,6,7,8]]
         answer = False
         res = simp.check_equal_size(m1, m2)
+        self.assertEqual(res, answer)
+
+    def test_add_eq_size_dim1(self):
+        '''input shape must be equal and output same size'''
+        m1 = [1,2,3,4,5,6]
+        m2 = [1,2,3,4,5,6]
+        answer = [2,4,6,8,10,12]
+        res = simp.add(m1, m2)
         self.assertEqual(res, answer)
 
 

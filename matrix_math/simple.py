@@ -56,17 +56,28 @@ def frobenius_norm(m):
 
 def add(m1, m2):
     result = m1[:]
-    if check_equal_size(m1, m2):
+    dim = check_equal_size(m1, m2)
+    if dim == 2:
         for i, row in enumerate(result):
             for n, _ in enumerate(row):
                 result[i][n] = m1[i][n] + m2[i][n]
+        return result
+    elif dim == 1:
+        for i, _ in enumerate(result):
+            result[i] = m1[i] + m2[i]
         return result
     else:
         return False
 
 def check_equal_size(m1, m2):
-    if len(m1[0]) == len(m2[0]) and \
-        len(m1) == len(m2):
-        return True
-    else:
-        return False
+    dim = 0
+    try:
+        if len(m1[0]) == len(m2[0]) and \
+            len(m1) == len(m2):
+            dim = 2
+        else:
+            dim = 0
+    except TypeError:
+        if len(m1) == len(m2):
+            dim = 1
+    return dim
