@@ -45,7 +45,6 @@ class TestSimple(unittest.TestCase):
         self.assertEqual(res, answer)
     
     def test_add_noteq_size(self):
-        '''input shape must be equal and output same size'''
         m1 = [[1,2,3],[4,5,6]]
         m2 = [[1,2,3,4],[5,6,7,8]]
         answer = False
@@ -53,7 +52,6 @@ class TestSimple(unittest.TestCase):
         self.assertEqual(res, answer)
 
     def test_equal_size(self):
-        '''input shape must be equal and output same size'''
         m1 = [[1,2,3],[4,5,6]]
         m2 = [[1,2,3],[4,5,6]]
         answer = 2
@@ -61,7 +59,6 @@ class TestSimple(unittest.TestCase):
         self.assertEqual(res, answer)
 
     def test_noteq_size(self):
-        '''input shape must be equal and output same size'''
         m1 = [[1,2,3],[4,5,6]]
         m2 = [[1,2,3,4],[5,6,7,8]]
         answer = False
